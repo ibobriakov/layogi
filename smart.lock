@@ -9,7 +9,9 @@
       "fast-render": {},
       "spin": {},
       "autoform": {},
-      "iron-router-progress": {}
+      "iron-router-progress": {},
+      "upload-avatar": {},
+      "mailchimp-lists": {}
     },
     "packages": {
       "momentjs": {
@@ -34,8 +36,8 @@
       },
       "fast-render": {
         "git": "https://github.com/arunoda/meteor-fast-render.git",
-        "tag": "v0.2.6",
-        "commit": "6ff59e07dc5ec9cd2f5d334ff95ff181d86965b5"
+        "tag": "v0.2.8",
+        "commit": "149984b1aff3a5642a270aff9bd9006872c8302e"
       },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
@@ -44,13 +46,23 @@
       },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",
-        "tag": "v0.11.0",
-        "commit": "efdffcdf836a45c50c39696ede15399177ccb9fa"
+        "tag": "v0.12.0",
+        "commit": "24b0284425e446f2d88760a81052eefe74a20bbf"
       },
       "iron-router-progress": {
         "git": "https://github.com/Multiply/iron-router-progress.git",
         "tag": "v0.4.0",
         "commit": "02f78bdaca4c13d59f548d5a0ce83408c34b56d1"
+      },
+      "upload-avatar": {
+        "git": "https://github.com/particle4dev/upload-avatar-meteor.git",
+        "tag": "v0.1.0",
+        "commit": "b6148a2bb383a6739097ed3e42ead7392ac2b6e8"
+      },
+      "mailchimp-lists": {
+        "git": "https://github.com/MiroHibler/meteor-mailchimp-lists.git",
+        "tag": "v0.2.0",
+        "commit": "2787ed61feb95ce05fbc7bb44c0b1d5f564d5682"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
@@ -71,6 +83,11 @@
         "git": "https://github.com/acreeger/meteor-moment.git",
         "tag": "v2.6.0",
         "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+      },
+      "mailchimp": {
+        "git": "https://github.com/MiroHibler/meteor-mailchimp.git",
+        "tag": "v0.2.0",
+        "commit": "a714b79dc4992ec2bbdbc9a152d13aab114bae3c"
       }
     }
   }

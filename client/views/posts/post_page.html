@@ -1,9 +1,14 @@
 <template name="post_page">
+  
 	{{#if canView}}
     {{#with post}}
     <div class="single-post grid">
       {{> post_item}}
       {{#if canComment}}
+      <div class="social-box">
+        <span class='st_facebook_hcount' displayText='Facebook'></span>
+        <span class='st_twitter_hcount' displayText='Tweet'></span>
+      </div>
        <div id='blog-page-comments'>
         <!-- DISQUS COMMENT CODE -->
               <div id="disqus_thread"></div>

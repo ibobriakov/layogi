@@ -40,7 +40,10 @@ Template.post_submit.events({
       return false;
     }
 
+
     var title= $('#title').val();
+    var price = $('#price').val();
+
     var url = $('#url').val();
     var shortUrl = $('#short-url').val();
     var body = instance.editor.exportFile();
@@ -56,6 +59,7 @@ Template.post_submit.events({
 
     var properties = {
         headline: title
+      , price: price
       , body: body
       , shortUrl: shortUrl
       , categories: categories

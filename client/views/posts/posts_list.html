@@ -1,12 +1,15 @@
 <template name="posts_list">
-	<div class="posts grid list">
-		{{#each posts}}
-			{{> post_item}}
-		{{/each}}
-	</div>
-  {{#if hasMorePosts}}
-  	<div class="grid more-button">
-  		<a class="more-link" href="{{loadMoreUrl}}">{{i18n "Load more"}}</a>
-  	</div>
-  {{/if}}
+	<table class="posts-group posts grid list">
+		<tbody>
+			{{#each posts}} 
+				{{> post_item}} 
+			{{/each}}
+			
+			{{#if hasMorePosts}}
+				<div class="grid more-button">
+					<a class="more-link" href="{{loadMoreUrl}}">{{i18n "Load more"}}</a>
+				</div>
+			{{/if}}
+		</tbody>
+	</table>
 </template>

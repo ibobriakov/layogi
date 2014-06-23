@@ -113,7 +113,7 @@ html, body, .outer-wrapper {
 
 /* line 4, ../sass/partials/_main.scss */
 body {
-  background: #e0f1f7; }
+  /*background: #e0f1f7;*/ }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   /* line 9, ../sass/partials/_main.scss */
@@ -176,7 +176,8 @@ body, textarea, input, button, input[type="submit"], input[type="button"] {
 /* line 9, ../sass/partials/_typography.scss */
 a {
   text-decoration: none;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #BBBBBB;}
   /* line 12, ../sass/partials/_typography.scss */
   a:link, a:visited, a:active {
     color: #a4a9ab; }
@@ -289,7 +290,7 @@ h3 {
   width: 260px;
   /* These styles are optional, and describe how the pageslide will look */
   background-color: #333;
-  color: #FFF;
+  color: #BBB;
   -webkit-box-shadow: inset 0 0 5px 5px #222;
   -moz-box-shadow: inset 0 0 5px 5px #222;
   box-shadow: inset 0 0 5px 5px #222;
@@ -420,7 +421,7 @@ body.pageslide-open {
       padding: 0px 8px;
       left: -50%;
       font-size: 14px;
-      color: #fff; }
+      color: #bbb; }
       /* line 21, ../sass/partials/_tooltips.scss */
       .has-tooltip .tooltip span:after {
         top: 100%;
@@ -615,7 +616,8 @@ body.pageslide-open {
     top: -1px;
     margin-left: 4px;
     content: "▼";
-    font-size: 8px; }
+    font-size: 8px;
+    color:#bbb;}
   /* line 13, ../sass/partials/_dropdown.scss */
   .dropdown .dropdown-menu {
     display: none;
@@ -669,22 +671,22 @@ body.pageslide-open {
 
 /* line 10, ../sass/modules/_header.scss */
 .header {
-  background: #4e555d url("/img/bg-header.png") top center;
-  background-color: #4e555d;
+ /* background: #4e555d url("/img/bg-header.png") top center;
+  background-color: #4e555d;*/
   margin-bottom: 10px;
-  height: 70px;
+  /*height: 160px;*/
   position: relative;
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
-  -webkit-border-radius: 0 0 3px 3px;
+  /*-webkit-border-radius: 0 0 3px 3px;
   -moz-border-radius: 0 0 3px 3px;
   -ms-border-radius: 0 0 3px 3px;
   -o-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
   -webkit-box-shadow: 0 1px 1px black;
   -moz-box-shadow: 0 1px 1px black;
-  box-shadow: 0 1px 1px black; }
+  box-shadow: 0 1px 1px black;*/ }
   /* line 3, ../sass/partials/_mixins.scss */
   .header:before, .header:after {
     content: "";
@@ -732,6 +734,37 @@ body.pageslide-open {
     position: relative;
     z-index: 20; }
 
+.btn_s{
+  
+     background: none repeat scroll 0 0 green !important; /*#DA552F*/
+    border: 2px solid green !important; /*#DA552F*/
+    border-radius: 3px !important;
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    padding: 7px 14px !important;
+    text-decoration: none !important;
+    transition: all 0.15s ease-in-out 0s !important;
+    margin-left: 45px !important;
+    height:39px !important;
+    font-size:13px !important;
+}
+.btn_s:hover{
+  border-color: #B8330D;
+  box-shadow: 0 0 8px green; /*#DA552F;*/
+}
+.b_well{
+  font-size: 86%;
+   width: 100%;
+}
+.search_b{
+  /*display: inline-block;*/
+  float:right;
+  margin-top: 10px;
+  /*margin-top:5px;*/
+}
+.new_subscriber{
+  display:inline-block;
+}
 /* line 74, ../sass/modules/_header.scss */
 .auth-buttons {
   position: relative;
@@ -754,7 +787,7 @@ body.pageslide-open {
       color: #4a4444; }
     /* line 95, ../sass/modules/_header.scss */
     .auth-buttons #login-buttons a.login-link-text {
-      color: #fff;
+      color: #bbb;
       font-weight: normal;
       display: inline-block;
       height: 26px; }
@@ -826,7 +859,8 @@ body.pageslide-open {
       font-size: 16px;
       line-height: 26px;
       height: 26px;
-      font-weight: normal; }
+      font-weight: normal;
+      color:#bbb;}
       /* line 148, ../sass/modules/_header.scss */
       .nav > li > a.intercom em:before {
         content: '('; }
@@ -839,7 +873,7 @@ body.pageslide-open {
   position: relative; }
   /* line 160, ../sass/modules/_header.scss */
   .search .search-field {
-    font-size: 14px;
+   /* font-size: 14px;
     padding: 4px 12px;
     line-height: 1.3;
     border-radius: 20px;
@@ -847,16 +881,75 @@ body.pageslide-open {
     width: 100px;
     -webkit-transition: 0.2s all;
     -moz-transition: 0.2s all;
-    background: white; }
+    background: white;*/
+   
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #DDDDDD;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 7px;
+    transition: all 0.15s ease-in-out 0s;
+   }
+   .block_h{
+    /*height:50px;*/
+    padding:20px 0 10px;
+   }
+   .block_h:after {
+     content: '';
+     display: block;
+     clear: both;
+   }
+   .logo_h{
+    float: left;
+    font-size: 32px;
+    color: #000 !important;
+   }
+   .logo_h span {
+    color: #008000 !important;
+    
+   }
+
+   .text_h{
+    float:left;
+    margin-left:10px;
+    margin-top:16px;
+    font-size:15px;
+   }
+   .current-user{
+     display: inline-block;
+     float: right;
+   }
+   .well{
+      /*background: none repeat scroll 0 0 #F2F2F2;
+    border-radius: 5px;
+    margin-top: 19px;
+   float:left;
+    padding: 10px;
+    clear: both;
+    width:76%;*/
+    margin-top: 19px;
+    background: #f2f2f2;
+    border-radius: 5px;
+    padding: 10px;
+   }
+   .well input{
+      background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #DDDDDD;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 7px;
+    transition: all 0.15s ease-in-out 0s;
+   }
     /* line 170, ../sass/modules/_header.scss */
-    .search .search-field:focus {
-      outline: none; }
+    .search .search-field:focus, #subscriber_email {
+      border-color: green;/*sssssssssss*/
+      outline: 0 none; }
   /* line 175, ../sass/modules/_header.scss */
   .search.empty .search-field {
     background: rgba(255, 255, 255, 0.1); }
     /* line 177, ../sass/modules/_header.scss */
-    .search.empty .search-field:focus {
-      background: white; }
+    .search.empty .search-field:focus, #subscriber_email {
+      background: white;}
   /* line 181, ../sass/modules/_header.scss */
   .search.empty .search-clear {
     display: none; }
@@ -942,7 +1035,7 @@ body.pageslide-open {
         text-align: center;
         vertical-align: middle;
         color: #92b5c3;
-        color: #f36c3d;
+        color: green; /*#f36c3d;*/
         text-shadow: 0px 1px 0px white; }
         /* line 70, ../sass/modules/_posts.scss */
         .post-content .post-upvote .upvote-link i.icon-check {
@@ -1029,7 +1122,7 @@ body.pageslide-open {
 
 /* line 150, ../sass/modules/_posts.scss */
 .post-actions {
-  float: right;
+  
   padding: 0; }
   /* line 153, ../sass/modules/_posts.scss */
   .post-actions li {
@@ -1053,7 +1146,7 @@ body.pageslide-open {
       line-height: 50px; }
       /* line 172, ../sass/modules/_posts.scss */
       .post-actions li a.edit-link {
-        color: #f36c3d; }
+        color: green;/*#f36c3d;*/ }
       /* line 175, ../sass/modules/_posts.scss */
       .post-actions li a.share-link {
         color: #7ac0e4;
@@ -1075,7 +1168,7 @@ body.pageslide-open {
         cursor: default; }
         /* line 193, ../sass/modules/_posts.scss */
         .post-actions li a.voted .action {
-          color: #fff; }
+          color: #bbb; }
       /* line 197, ../sass/modules/_posts.scss */
       .post-actions li a .count {
         position: absolute;
@@ -1142,7 +1235,7 @@ body.pageslide-open {
   /* line 265, ../sass/modules/_posts.scss */
   .share-options:before {
     border-color: rgba(0, 0, 0, 0);
-    border-left-color: #f36c3d;
+    border-left-color: green; /*#f36c3d*/
     border-width: 11px;
     top: 20px;
     margin-top: -11px; }
@@ -1240,7 +1333,7 @@ body.pageslide-open {
       display: block;
       height: 30px;
       width: 30px;
-      background: #f36c3d;
+      background: green; /* #f36c3d;*/
       -webkit-border-radius: 100px;
       -moz-border-radius: 100px;
       -ms-border-radius: 100px;
@@ -1547,7 +1640,7 @@ form input[type="text"], form input[type="password"], form input[type="number"],
   /* line 71, ../sass/modules/_forms.scss */
   form input[type="text"]:focus, form input[type="password"]:focus, form input[type="number"]:focus, form textarea:focus, form .login-form input:focus, .accounts-dialog input[type="text"]:focus, .accounts-dialog input[type="password"]:focus, .accounts-dialog input[type="number"]:focus, .accounts-dialog textarea:focus, .accounts-dialog .login-form input:focus {
     outline: none;
-    border-color: #f36c3d;
+    border-color: green; /*#f36c3d;*/
     -webkit-box-shadow: 0px 0px 5px 0px rgba(243, 108, 61, 0.3);
     -moz-box-shadow: 0px 0px 5px 0px rgba(243, 108, 61, 0.3);
     box-shadow: 0px 0px 5px 0px rgba(243, 108, 61, 0.3); }
@@ -1580,7 +1673,7 @@ input[type="submit"], button, .button, .auth-buttons #login-buttons #login-butto
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
   border-radius: 0px;
-  background: #f36c3d;
+  background: green; /*#f36c3d;*/
   color: white;
   text-align: center;
   display: block;
@@ -1752,8 +1845,8 @@ table {
 .error {
   margin-bottom: 10px;
   text-align: center;
-  background: #f36c3d;
-  color: white; }
+  background:#F2F2F2;/* #f36c3d;*/
+  color: black; }
 
 /* line 1, ../sass/modules/_notifications.scss */
 .notifications {
@@ -2062,3 +2155,69 @@ table {
         /* line 222, ../sass/partials/_mobile.scss */
         .post .post-actions li a .action {
           display: none; } }
+          
+  /* POST BLOG */
+  .posts .posts-group{
+   border-spacing: 0;
+    width: 100%;
+  }
+  .post{
+    font-size: 18px;
+    height: 50px;
+    padding: 10px 0;
+    vertical-align: top;
+  }
+  .upvote{
+    text-align: center;
+    width: 30px;
+  }
+  .upvote-link{
+     border-color: transparent transparent #bbbbbb;
+    border-style: solid;
+    border-width: 12px 7px;
+    bottom: 2px;
+    display: inline-block;
+    height: 0;
+    position: relative;
+    width: 0;
+  }
+  .upvote .vote-count{
+      bottom: 10px;
+    display: block;
+    font-size: 12px;
+    position: relative;
+  }
+  .user-with-tooltip{
+    position: relative;
+    width: 40px;
+  }
+  .post .user-image{
+    
+  }
+  .user-image{
+     border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 0;
+  }
+  .url{
+     padding-top: 5px;
+  }
+  .post-url{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .post-tagline{
+    color: #999999;
+    font-size: 17px;
+  }
+  .post-actions{
+     color: #bbbbbb;
+    font-size: 13px;
+  }
+  .view-discussion{
+    z-index: 100;
+  }

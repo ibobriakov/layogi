@@ -1,0 +1,82 @@
+.well.not-current-user {
+	display: inline-block;
+	margin-top: 0;
+	font-size: 16px;
+}
+.b_well:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#new_subscriber .btn_s {
+	display: inline-block;
+	float: none;
+	margin: 0 !important;
+	padding: 1px 10px !important;
+	height: auto !important;
+}
+.well #subscriber_email {
+	padding: 3px;
+	margin: 0 0 0 5px;
+}
+
+.search .search-field {
+	margin: 0 !important;
+}
+
+.posts-group tr {
+	border-bottom: 0;
+}
+.posts-group tr td {
+	padding: 0;
+}
+
+
+.user-image-link {
+	display: inline-block;
+	overflow: hidden;
+	font-size: 0;
+}
+
+
+/* Mailchimp */
+.mailchimp-box {
+	padding: 10px;
+	background-color: #f2f2f2;
+	border-radius: 3px;
+	font-size: 16px;
+	float: left;
+}
+.mailchimp-box p {
+	display: inline-block;
+	min-width: 170px;
+}
+.mailchimp-box .email {
+	padding: 7px;
+	border: 2px solid #ddd;
+	border-radius: 2px;
+	display: inline-block;
+	margin: 0;
+}
+.mailchimp-box .subscribe {
+	display: inline-block;
+	padding: 0 10px;
+	margin: 0;
+	height: 34px;
+	line-height: 34px;
+	position: relative;
+	top: 1px;
+}
+
+.td-edit {
+	padding: 0 5px;
+}
+.td-edit a {
+	display: inline-block;
+	font-weight: normal;
+	border-left: 1px solid #bbb;
+	line-height: 14px;
+	font-size: 14px;
+	padding-left: 5px;
+}

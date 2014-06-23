@@ -9,7 +9,7 @@ Posts.deny({
     if(isAdminById(userId))
       return false;
     // deny the update if it contains something other than the following fields
-    return (_.without(fieldNames, 'headline', 'url', 'body', 'shortUrl', 'shortTitle', 'categories').length > 0);
+    return (_.without(fieldNames, 'headline', 'price','url', 'body', 'shortUrl', 'shortTitle', 'categories').length > 0);
   }
 });
 
@@ -25,6 +25,7 @@ Meteor.methods({
   post: function(post){
     var headline = cleanUp(post.headline),
         body = cleanUp(post.body),
+        price = cleanUp(post.price);
         user = Meteor.user(),
         userId = user._id,
         submitted = parseInt(post.submitted) || new Date().getTime(),
@@ -49,6 +50,10 @@ Meteor.methods({
     if(!post.headline)
       throw new Meteor.Error(602, i18n.t('Please fill in a headline'));
 
+    if(!post.price)
+      throw new Meteor.Error(602, i18n.t('Please fill in a price'));
+
+
     // check that there are no previous posts with the same link
     if(post.url && (typeof postWithSameLink !== 'undefined')){
       Meteor.call('upvotePost', postWithSameLink);
@@ -67,6 +72,7 @@ Meteor.methods({
 
     post = _.extend(post, {
       headline: headline,
+      price: price,
       body: body,
       userId: userId,
       author: getDisplayNameById(userId),
@@ -103,6 +109,7 @@ Meteor.methods({
           postAuthorName : getDisplayName(postAuthor),
           postAuthorId : post.userId,
           postHeadline : headline,
+          postPrice: price,
           postId : postId
         }
       };

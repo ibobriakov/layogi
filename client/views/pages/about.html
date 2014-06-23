@@ -1,0 +1,14 @@
+<template name="about">
+	<div class="posts grid list">
+		
+		This is content for About page:
+		We've already encountered Meteor's Session. Along with the current URL, this is what we use to keep track of what the user
+is looking at as they browse around the app.
+The Session is a global reactive store of data. It's global in the sense of a global singleton object: there's one session, and
+it's accessible everywhere. Global variables are usually seen as a bad thing, but in this case the session is used as a central
+communication bus for different parts of the application.
+When the router sets currentPostId, our templates and subscriptions know that they should render and load the
+current post up from the server. As the Session is reactive, this happens transparently to the developer, and the session
+becomes a way of coupling those three components.
+	</div>
+</template>

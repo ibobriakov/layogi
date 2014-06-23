@@ -8,6 +8,8 @@
     "fast-render": {},
     "spin": {},
     "autoform": {},
-    "iron-router-progress": {}
+    "iron-router-progress": {},
+    "upload-avatar": {},
+    "mailchimp-lists": {}
   }
 }

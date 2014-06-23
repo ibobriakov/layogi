@@ -1,22 +1,11 @@
 <template name="nav">
   <header class="header grid">
-
+    <div class="block_h">
     <a id="mobile-menu" href="#menu" class="mobile mobile-button menu"><i class="icon-menu"></i><span>{{i18n "Menu"}}</span></a>
-
+<a href="/" class="logo_h">LA <span>YOGI</span></a><span class="text_h">Namaste your way to LA’s Best Deals!</span>
     <ul class="nav site-nav desktop">
+  
  
-      {{#if canView}}
-      <li class="dropdown">
-        <a class="View" href="/">{{i18n "View"}}</a>
-        <div class="dropdown-menu">
-          <ul role="menu" aria-labelledby="dLabel">
-            {{#each viewNav}}
-              {{> navItem this}}
-            {{/each}}
-          </ul>
-        </div>
-      </li>
-      {{/if}}
       {{#if hasCategories}}
       <li class="dropdown">
         <a class="categories" href="/">{{i18n "Categories"}}</a>
@@ -42,10 +31,19 @@
       </li>
       {{/if}}
       <li>
-        {{> search}}
+        
       </li>
     </ul>
+  <p class="current-user">
+        <a href="/about">About</a> ·
+        <a target="_blank" href="http://blog.producthunt.com">Blog</a> ·
+        {{#if canView}}
+        <a id="submit" href="/submit">{{i18n "Submit"}}</a> ·
+        {{/if}}
 
+        {{> loginButtons align="right"}}
+
+      </p>
     {{#if logo_url}}
       <h1 class="logo image" style="height:{{logo_height}}px; width:{{logo_width}}px; top:{{logo_top}}px; margin-left:{{logo_offset}}px;">
         <a href="/">
@@ -55,16 +53,29 @@
     {{else}}
       <h1 class="logo"><a href="/">{{site_title}}</a></h1>
     {{/if}}
-
-    {{#if canView}}
-    <ul class="nav user-nav desktop">
-      <li><a id="submit" class="submit button" href="/submit">{{i18n "Post"}}</a></li>
-    </ul>
-    {{/if}}
-
+   
+    
     <div class="auth-buttons">
-      {{> loginButtons align="right"}}
+      
     </div>
-
+    </div>
+    <div class="b_well">
+ <!-- MailChimp block -->
+      <div class="mailchimp-box">
+        {{> MailChimpListSubscribe}}
+      </div>
+<!-- <div class="not-current-user well">
+            Get the best yoga deals delivered to your inbox daily!
+            <form method="post" id="new_subscriber" data-remote="true" class="new_subscriber" action="/subscribers" accept-charset="UTF-8">
+              <div style="display:none"><input type="hidden" value="✓" name="utf8"></div>
+              <input type="email" placeholder="Your email" name="subscriber[email]" id="subscriber_email">
+              <input type="submit" class="btn_s" value="Namaste!" name="commit">
+</form>
+</div> -->
+        <div class="search_b">
+          {{> search}}
+          </div>
+        <!-- MailChimp block -->
+    </div>
   </header>
 </template>
