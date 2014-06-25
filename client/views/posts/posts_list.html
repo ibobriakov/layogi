@@ -1,8 +1,11 @@
 <template name="posts_list">
 	<table class="posts-group posts grid list">
 		<tbody>
-			{{#each posts}} 
-				{{> post_item}} 
+			{{#each arrayify dates}}
+				<tr class="post-date"><td colspan="4"><div>{{day}}</div>{{date}}</td></tr>
+				{{#each posts}}
+			   		{{> post_item}}
+				{{/each}}
 			{{/each}}
 			
 			{{#if hasMorePosts}}

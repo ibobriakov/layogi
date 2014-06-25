@@ -1,12 +1,31 @@
 Template.posts_list.helpers({
-  posts : function () {
+  arrayify: function (obj) {
+    result = [];
+    for (var key in obj) result.push({
+      day:moment(parseInt(key)).format('DD'),
+      date:moment(parseInt(key)).format('MMMM DD, YYYY'),
+      posts:obj[key]
+    });
+    return result;
+  },
+  dates: function () {
     if(this.postsList){ // XXX
       this.postsList.rewind();    
       var posts = this.postsList.map(function (post, index, cursor) {
         post.rank = index;
         return post;
       });
-      return posts;
+      var dates = {}
+      for (var i = 0; i < posts.length; i++) {
+        var time = new Date(posts[i].createdAt).setHours(0,0,0,0);
+        if (dates[time]) {
+          dates[time].push(posts[i])
+        } else {
+          dates[time] = [posts[i]]
+        }
+      };
+      console.log(dates)
+      return dates;
     }
   },
   hasMorePosts: function(){
