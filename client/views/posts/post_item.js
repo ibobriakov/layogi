@@ -3,12 +3,18 @@ Template.post_item.created = function () {
 };
 
 Template.post_item.helpers({
+  commentsCount: function () {
+    if(this.comments == 1){
+      return this.comments+' comment'
+    } else {
+      return this.comments+' comments'
+    }
+  },
   post: function(){
     // note: when the data context is set by the router, it will be "this.post". When set by a parent template it'll be "this"
     return this.post || this;
   },
   price: function () {
-    console.log(this)
     return this.price
   },
   categories: function () {

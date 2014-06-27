@@ -24,7 +24,6 @@ Template.posts_list.helpers({
           dates[time] = [posts[i]]
         }
       };
-      console.log(dates)
       return dates;
     }
   },
