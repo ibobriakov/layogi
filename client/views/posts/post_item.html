@@ -21,8 +21,10 @@
 
 		</td>
 		<td class="url">
-			<a target="_blank" href="{{postLink}}" class="post-url">{{authorName}}</a>
-			<span class="post-tagline">{{headline}}</span>
+			<a target="_blank" href="{{postLink}}" class="post-url">{{headline}}</a> - <span class="post-tagline">${{price}}</span>
+			{{#each categories}}
+				<a class="cat" href="http://www.layogi.com/category/{{this.slug}}">{{this.name}}</a>				
+			{{/each}}
 			<span class="post-actions">
 				·
 				<a data-id="3619" data-url="{{postLink}}" class="view-discussion" href="/posts/{{_id}}#disqus_thread"></a> 

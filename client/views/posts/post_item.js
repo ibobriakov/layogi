@@ -7,9 +7,16 @@ Template.post_item.helpers({
     // note: when the data context is set by the router, it will be "this.post". When set by a parent template it'll be "this"
     return this.post || this;
   },
+  price: function () {
+    console.log(this)
+    return this.price
+  },
+  categories: function () {
+    return this.categories
+  },
   postLink: function(){
-    //return !!this.url ? getOutgoingUrl(this.url) : "/posts/"+this._id;
-    return "/posts/"+this._id;
+    return !!this.url ? getOutgoingUrl(this.url) : "/posts/"+this._id;
+    //return "/posts/"+this._id;
   },
   postTarget: function() {
     return !!this.url ? '_blank' : '';
